@@ -1,0 +1,724 @@
+<head>
+    <link rel="icon" type="image/png" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Candels by Misu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+
+      font-family:'Poppins', sans-serif;
+
+      background:
+      linear-gradient(
+      rgba(15,15,15,0.55),
+      rgba(15,15,15,0.55)
+      ),
+      url('background.png');
+
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+
+      min-height:100vh;
+
+      overflow-x:hidden;
+
+      color:white;
+    }
+
+
+    body::before{
+
+      content:"";
+
+      position:fixed;
+
+      inset:0;
+
+      background:
+      radial-gradient(circle at top right,
+      rgba(255,215,170,0.18),
+      transparent 30%),
+
+      radial-gradient(circle at bottom left,
+      rgba(255,255,255,0.08),
+      transparent 25%);
+
+      pointer-events:none;
+    }
+
+
+    .hero{
+
+      text-align:center;
+
+      padding:70px 20px 20px;
+    }
+
+    .hero h1{
+
+      font-size:58px;
+
+      font-weight:700;
+
+      color:#ffe4c7;
+
+      text-shadow:
+      0 0 25px rgba(255,228,199,0.25);
+
+      margin-bottom:18px;
+    }
+
+    .hero p{
+
+      max-width:850px;
+
+      margin:auto;
+
+      color:rgba(255,255,255,0.82);
+
+      line-height:1.8;
+
+      font-size:17px;
+    }
+
+
+    .container{
+
+      width:100%;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:50px;
+
+      flex-wrap:wrap;
+
+      padding:60px 25px;
+    }
+
+
+    .card{
+
+      position:relative;
+
+      width:360px;
+
+      border-radius:30px;
+
+      overflow:hidden;
+
+      background:
+      rgba(255,255,255,0.08);
+
+      backdrop-filter:blur(14px);
+
+      border:1px solid rgba(255,255,255,0.15);
+
+      box-shadow:
+      0 10px 35px rgba(0,0,0,0.35),
+      inset 0 1px 1px rgba(255,255,255,0.1);
+
+      transition:0.45s ease;
+    }
+
+    .card:hover{
+
+      transform:
+      translateY(-12px)
+      scale(1.02);
+
+      box-shadow:
+      0 18px 45px rgba(0,0,0,0.45),
+      0 0 25px rgba(255,215,170,0.2);
+    }
+
+
+    .card::before{
+
+      content:"";
+
+      position:absolute;
+
+      inset:0;
+
+      background:
+      linear-gradient(
+      140deg,
+      rgba(255,255,255,0.15),
+      transparent 40%,
+      transparent 60%,
+      rgba(255,255,255,0.08)
+      );
+
+      pointer-events:none;
+    }
+
+    .card img{
+
+      width:100%;
+      height:380px;
+
+      object-fit:cover;
+
+      transition:0.4s;
+    }
+
+    .card:hover img{
+
+      transform:scale(1.04);
+    }
+
+    .card-content{
+
+      padding:28px;
+      text-align:center;
+    }
+
+    .card-content h2{
+
+      font-size:28px;
+      font-weight:700;
+
+      margin-bottom:12px;
+
+      color:#ffe4c7;
+
+      letter-spacing:0.5px;
+    }
+
+    .card-content p{
+
+      color:rgba(255,255,255,0.82);
+
+      line-height:1.7;
+
+      font-size:15px;
+
+      margin-bottom:25px;
+    }
+
+
+    .buttons{
+
+      display:flex;
+      flex-direction:column;
+
+      gap:14px;
+      align-items:center;
+    }
+
+    .btn{
+
+      width:240px;
+
+      padding:14px 20px;
+
+      border:none;
+      border-radius:16px;
+
+      cursor:pointer;
+
+      font-size:15px;
+      font-weight:600;
+
+      transition:0.35s ease;
+
+      text-decoration:none;
+    }
+
+
+    .view-btn{
+
+      background:
+      linear-gradient(
+      135deg,
+      #ffe1b6,
+      #d9a066
+      );
+
+      color:#2b1b12;
+
+      box-shadow:
+      0 6px 20px rgba(255,210,160,0.3);
+    }
+
+    .view-btn:hover{
+
+      transform:translateY(-3px);
+
+      box-shadow:
+      0 10px 25px rgba(255,210,160,0.45);
+    }
+
+
+    .phone-btn{
+
+      background:
+      linear-gradient(
+      135deg,
+      #25D366,
+      #18a34a
+      );
+
+      color:white;
+
+      box-shadow:
+      0 6px 20px rgba(37,211,102,0.3);
+    }
+
+    .phone-btn:hover{
+
+      transform:translateY(-3px);
+
+      box-shadow:
+      0 10px 25px rgba(37,211,102,0.45);
+    }
+
+
+    .custom-box{
+
+      width:90%;
+      max-width:1200px;
+
+      margin:20px auto 80px;
+
+      background:
+      rgba(255,255,255,0.08);
+
+      border:1px solid rgba(255,255,255,0.12);
+
+      border-radius:35px;
+
+      padding:45px;
+
+      backdrop-filter:blur(14px);
+
+      text-align:center;
+
+      box-shadow:
+      0 10px 35px rgba(0,0,0,0.25);
+    }
+
+    .custom-box h2{
+
+      font-size:38px;
+
+      color:#ffe4c7;
+
+      margin-bottom:20px;
+    }
+
+    .custom-box p{
+
+      max-width:850px;
+
+      margin:auto;
+
+      line-height:1.9;
+
+      color:rgba(255,255,255,0.85);
+
+      font-size:16px;
+    }
+
+    .custom-phone{
+
+      margin-top:30px;
+
+      display:inline-block;
+
+      padding:15px 30px;
+
+      border-radius:18px;
+
+      text-decoration:none;
+
+      background:
+      linear-gradient(
+      135deg,
+      #25D366,
+      #18a34a
+      );
+
+      color:white;
+
+      font-weight:600;
+
+      font-size:18px;
+
+      transition:0.3s;
+    }
+
+    .custom-phone:hover{
+
+      transform:translateY(-4px);
+    }
+
+    footer{
+
+      text-align:center;
+
+      padding:22px;
+
+      color:rgba(255,255,255,0.7);
+
+      font-size:14px;
+    }
+
+
+    .modal{
+
+      display:none;
+
+      position:fixed;
+
+      z-index:999;
+
+      inset:0;
+
+      background:rgba(0,0,0,0.35);
+
+      backdrop-filter:blur(8px);
+
+      -webkit-backdrop-filter:blur(8px);
+
+      justify-content:center;
+      align-items:center;
+
+      padding:20px;
+
+      animation:fadeIn 0.3s ease;
+    }
+
+    .modal img{
+
+      max-width:88%;
+      max-height:88%;
+
+      border-radius:25px;
+
+      box-shadow:
+      0 0 40px rgba(255,255,255,0.15);
+
+      animation:zoomIn 0.3s ease;
+    }
+
+    .close{
+
+      position:absolute;
+
+      top:18px;
+      right:30px;
+
+      color:white;
+
+      font-size:52px;
+
+      cursor:pointer;
+
+      transition:0.3s;
+    }
+
+    .close:hover{
+
+      transform:scale(1.15);
+    }
+
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+      }
+
+      to{
+        opacity:1;
+      }
+    }
+
+    @keyframes zoomIn{
+
+      from{
+        transform:scale(0.85);
+        opacity:0;
+      }
+
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+    }
+
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .container{
+        padding:40px 18px;
+      }
+
+      .card{
+        width:100%;
+        max-width:390px;
+      }
+
+      .card img{
+        height:320px;
+      }
+
+      .custom-box{
+        padding:35px 22px;
+      }
+
+      .custom-box h2{
+        font-size:30px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+  <section class="hero">
+
+    <h1>Candels by Misu</h1>
+
+    <p>
+      Lumânări handmade premium create cu atenție la fiecare detaliu. 
+      Eleganță, rafinament și modele speciale pentru botezuri, cadouri și momente unice.
+    </p>
+
+  </section>
+
+
+  <div class="container">
+
+
+    <div class="card">
+
+      <img src="poza1.png" alt="Lumânări Botez Bebeluși">
+
+      <div class="card-content">
+
+        <h2>Bebeluși de Botez</h2>
+
+        <p>
+          Lumânări elegante și delicate create special pentru cele mai frumoase momente din viața celor mici.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza1.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="poza2.png" alt="Lumânări Premium Botez">
+
+      <div class="card-content">
+
+        <h2>Lumânări Premium</h2>
+
+        <p>
+          Design modern și premium pentru ceremonii speciale și amintiri de neuitat.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza2.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="poza3.png" alt="Lumânare Artistică Handmade">
+
+      <div class="card-content">
+
+        <h2>Rose Heart Collection</h2>
+
+        <p>
+          Lumânare handmade premium cu design floral și inimă sculptată, creată pentru cadouri speciale și momente elegante.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza3.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <img src="poza4.png" alt="Lumânare Trandafir Mov">
+
+      <div class="card-content">
+
+        <h2>Velvet Rose</h2>
+
+        <p>
+          Lumânare artistică în formă de trandafir mov, cu finisaje premium și design elegant pentru decoruri și cadouri rafinate.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza4.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <section class="custom-box">
+
+    <h2>✨ Lumânări Personalizate ✨</h2>
+
+    <p>
+      Realizăm și lumânări personalizate exact pe placul clientului. 
+      Poți alege modelul, culoarea, florile, parfumul sau designul dorit pentru un produs unic și special. 
+      Pentru comenzi personalizate sau alte modele contactează-ne direct.
+    </p>
+
+    <a class="custom-phone"
+    href="tel:0774995264">
+
+      📞 0774 995 264
+
+    </a>
+
+  </section>
+
+  <footer>
+    © 2026 Candels by Misu
+  </footer>
+
+
+  <div class="modal" id="imageModal">
+
+    <span class="close"
+    onclick="closeModal()">
+
+      &times;
+
+    </span>
+
+    <img id="modalImg">
+
+  </div>
+
+  <script>
+
+    function openModal(imageSrc){
+
+      document.getElementById("imageModal").style.display = "flex";
+
+      document.getElementById("modalImg").src = imageSrc;
+
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal(){
+
+      document.getElementById("imageModal").style.display = "none";
+
+      document.body.style.overflow = "auto";
+    }
+
+    window.onclick = function(event){
+
+      const modal =
+      document.getElementById("imageModal");
+
+      if(event.target == modal){
+
+        closeModal();
+      }
+    }
+
+  </script>
+
+</body>
