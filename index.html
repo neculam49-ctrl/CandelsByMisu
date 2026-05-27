@@ -1,5 +1,8 @@
+
 <head>
-    <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="icon" type="image/png" href="logo.png">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,7 +40,6 @@
       color:white;
     }
 
-
     body::before{
 
       content:"";
@@ -57,7 +59,6 @@
 
       pointer-events:none;
     }
-
 
     .hero{
 
@@ -93,7 +94,6 @@
       font-size:17px;
     }
 
-
     .container{
 
       width:100%;
@@ -107,7 +107,6 @@
 
       padding:60px 25px;
     }
-
 
     .card{
 
@@ -143,7 +142,6 @@
       0 18px 45px rgba(0,0,0,0.45),
       0 0 25px rgba(255,215,170,0.2);
     }
-
 
     .card::before{
 
@@ -209,7 +207,6 @@
       margin-bottom:25px;
     }
 
-
     .buttons{
 
       display:flex;
@@ -238,7 +235,6 @@
       text-decoration:none;
     }
 
-
     .view-btn{
 
       background:
@@ -262,7 +258,6 @@
       0 10px 25px rgba(255,210,160,0.45);
     }
 
-
     .phone-btn{
 
       background:
@@ -285,7 +280,6 @@
       box-shadow:
       0 10px 25px rgba(37,211,102,0.45);
     }
-
 
     .custom-box{
 
@@ -377,7 +371,6 @@
       font-size:14px;
     }
 
-
     .modal{
 
       display:none;
@@ -392,14 +385,10 @@
 
       backdrop-filter:blur(8px);
 
-      -webkit-backdrop-filter:blur(8px);
-
       justify-content:center;
       align-items:center;
 
       padding:20px;
-
-      animation:fadeIn 0.3s ease;
     }
 
     .modal img{
@@ -411,8 +400,6 @@
 
       box-shadow:
       0 0 40px rgba(255,255,255,0.15);
-
-      animation:zoomIn 0.3s ease;
     }
 
     .close{
@@ -427,40 +414,7 @@
       font-size:52px;
 
       cursor:pointer;
-
-      transition:0.3s;
     }
-
-    .close:hover{
-
-      transform:scale(1.15);
-    }
-
-
-    @keyframes fadeIn{
-
-      from{
-        opacity:0;
-      }
-
-      to{
-        opacity:1;
-      }
-    }
-
-    @keyframes zoomIn{
-
-      from{
-        transform:scale(0.85);
-        opacity:0;
-      }
-
-      to{
-        transform:scale(1);
-        opacity:1;
-      }
-    }
-
 
     @media(max-width:768px){
 
@@ -491,25 +445,23 @@
     }
 
   </style>
+
 </head>
 
 <body>
-
 
   <section class="hero">
 
     <h1>Candels by Misu</h1>
 
     <p>
-      Lumânări handmade premium create cu atenție la fiecare detaliu. 
+      Lumânări handmade premium create cu atenție la fiecare detaliu.
       Eleganță, rafinament și modele speciale pentru botezuri, cadouri și momente unice.
     </p>
 
   </section>
 
-
   <div class="container">
-
 
     <div class="card">
 
@@ -545,7 +497,6 @@
 
     </div>
 
-
     <div class="card">
 
       <img src="poza2.png" alt="Lumânări Premium Botez">
@@ -579,7 +530,6 @@
       </div>
 
     </div>
-
 
     <div class="card">
 
@@ -615,7 +565,6 @@
 
     </div>
 
-
     <div class="card">
 
       <img src="poza4.png" alt="Lumânare Trandafir Mov">
@@ -650,16 +599,83 @@
 
     </div>
 
-  </div>
+    <div class="card">
 
+      <img src="poza5.png" alt="Lumânare Luxury Gold">
+
+      <div class="card-content">
+
+        <h2>Luxury Gold</h2>
+
+        <p>
+          Lumânare elegantă cu accente aurii și finisaje premium, perfectă pentru evenimente sofisticate și cadouri speciale.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza5.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="card">
+
+      <img src="poza6.png" alt="Lumânare White Elegance">
+
+      <div class="card-content">
+
+        <h2>White Elegance</h2>
+
+        <p>
+          Lumânare handmade minimalistă cu design rafinat și decor floral delicat, ideală pentru botezuri și decor elegant.
+        </p>
+
+        <div class="buttons">
+
+          <button class="btn view-btn"
+          onclick="openModal('poza6.png')">
+
+            ✨ Vizualizează Produs
+
+          </button>
+
+          <a class="btn phone-btn"
+          href="tel:0774995264">
+
+            📞 0774 995 264
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
   <section class="custom-box">
 
     <h2>✨ Lumânări Personalizate ✨</h2>
 
     <p>
-      Realizăm și lumânări personalizate exact pe placul clientului. 
-      Poți alege modelul, culoarea, florile, parfumul sau designul dorit pentru un produs unic și special. 
+      Realizăm și lumânări personalizate exact pe placul clientului.
+      Poți alege modelul, culoarea, florile, parfumul sau designul dorit pentru un produs unic și special.
       Pentru comenzi personalizate sau alte modele contactează-ne direct.
     </p>
 
@@ -675,7 +691,6 @@
   <footer>
     © 2026 Candels by Misu
   </footer>
-
 
   <div class="modal" id="imageModal">
 
