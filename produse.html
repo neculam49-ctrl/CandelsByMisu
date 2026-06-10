@@ -1,0 +1,129 @@
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produse | Candels by Misu</title>
+
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Candels by Misu
+    </div>
+
+    <nav>
+
+        <a href="index.html">Acasă</a>
+        <a href="produse.html">Produse</a>
+        <a href="contact.html">Contact</a>
+
+    </nav>
+
+</header>
+
+<section class="products-page">
+
+    <h1 class="page-title">Colecția Noastră</h1>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="poza1.png">
+            <div class="info">
+                <h3>Bebeluși de Botez</h3>
+                <p>Lumânări elegante și delicate pentru botez.</p>
+
+                <button onclick="openModal('poza1.png')">
+                    Vizualizează
+                </button>
+
+                <a href="contact.html" class="contact-btn">
+                    Contact
+                </a>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="poza2.png">
+            <div class="info">
+                <h3>Lumânări Premium</h3>
+                <p>Design premium pentru evenimente speciale.</p>
+
+                <button onclick="openModal('poza2.png')">Vizualizează</button>
+
+                <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="poza3.png">
+            <div class="info">
+                <h3>Rose Heart Collection</h3>
+                <p>Lumânare handmade premium.</p>
+
+                <button onclick="openModal('poza3.png')">Vizualizează</button>
+
+                <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="poza4.png">
+            <div class="info">
+                <h3>Velvet Rose</h3>
+                <p>Model artistic și elegant.</p>
+
+                <button onclick="openModal('poza4.png')">Vizualizează</button>
+
+                <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="poza5.png">
+            <div class="info">
+                <h3>Luxury Gold</h3>
+                <p>Finisaje premium cu accente aurii.</p>
+
+                <button onclick="openModal('poza5.png')">Vizualizează</button>
+
+                <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="poza6.png">
+            <div class="info">
+                <h3>White Elegance</h3>
+                <p>Design minimalist și rafinat.</p>
+
+                <button onclick="openModal('poza6.png')">Vizualizează</button>
+
+                <a href="contact.html" class="contact-btn">Contact</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg">
+</div>
+
+<footer>
+    © 2026 Candels by Misu
+</footer>
+
+<script src="script.js"></script>
+
+</body>
